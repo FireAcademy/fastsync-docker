@@ -22,6 +22,14 @@ if [[ ${log_to_file} == 'true' ]]; then
   tail -F "$CHIA_ROOT/log/debug.log" &
 fi
 
+# there's no need to start the wallet
+chia stop chia stop all -d
+chia start node
+
+# cron
+service cron start
+
+# start web server
 service apache2 start
 
 while true; do sleep 1; done
