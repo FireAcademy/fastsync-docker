@@ -30,6 +30,7 @@ chia start node
 service cron start
 
 # start web server
+touch /var/www/html/blockchain_v1_mainnet.sqlite
 service apache2 start
 
 while true; do sleep 1; done

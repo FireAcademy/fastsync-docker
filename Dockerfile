@@ -34,7 +34,6 @@ COPY docker-start.sh /usr/local/bin/
 COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN apt-get update && apt-get install -y apache2 apache2-utils
-RUN rm /var/www/html/*
 RUN touch /var/www/html/blockchain_v1_mainnet.sqlite
 RUN chown -R www-data:www-data /var/www/html
 
