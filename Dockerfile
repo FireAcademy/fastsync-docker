@@ -30,9 +30,6 @@ RUN echo "cloning ${BRANCH}" && \
 ENV PATH=/chia-blockchain/venv/bin:$PATH
 WORKDIR /chia-blockchain
 
-COPY docker-start.sh /usr/local/bin/
-COPY docker-entrypoint.sh /usr/local/bin/
-
 RUN apt-get update && apt-get install -y apache2 apache2-utils
 RUN touch /var/www/html/blockchain_v1_mainnet.sqlite
 RUN chown -R www-data:www-data /var/www/html
@@ -42,6 +39,9 @@ RUN apt-get update && apt-get install -y cron
 COPY crontab /etc/cron.d/crontab
 RUN chmod 0644 /etc/cron.d/crontab &&\
     crontab /etc/cron.d/crontab
+
+COPY docker-start.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["docker-start.sh"]
