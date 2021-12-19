@@ -23,7 +23,7 @@ if [[ ${log_to_file} == 'true' ]]; then
 fi
 
 # there's no need to start the wallet
-chia stop chia stop all -d
+chia stop all -d
 chia start node
 
 # cron
