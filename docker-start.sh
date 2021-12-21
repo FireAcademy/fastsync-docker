@@ -33,4 +33,8 @@ service cron start
 touch /var/www/html/blockchain_v1_mainnet.sqlite
 service apache2 start
 
+# sync
+mkdir -p "$CHIA_ROOT/db"
+cp /var/www/html/blockchain_v1_mainnet.sqlite "$CHIA_ROOT/db/"
+
 while true; do sleep 1; done
