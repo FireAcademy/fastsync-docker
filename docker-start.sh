@@ -24,17 +24,22 @@ fi
 
 # there's no need to start the wallet
 chia stop all -d
-chia start node
-
-# cron
-service cron start
 
 # start web server
-touch /var/www/html/blockchain_v1_mainnet.sqlite
+touch /var/www/html/blockchain_v1_mainnet.sqlite.zip
 service apache2 start
 
 # sync
 mkdir -p "$CHIA_ROOT/db"
-cp /var/www/html/blockchain_v1_mainnet.sqlite "$CHIA_ROOT/db/"
+cp /var/www/html/blockchain_v1_mainnet.sqlite.zip "$CHIA_ROOT/db/"
+cd "$CHIA_ROOT/db/"
+unzip blockchain_v1_mainnet.sqlite.zip
+rm blockchain_v1_mainnet.sqlite.zip
+
+# cron
+service cron start
+
+# start chia node
+chia start node
 
 while true; do sleep 1; done

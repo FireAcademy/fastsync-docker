@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 chia stop all -d
-cp /root/.chia/mainnet/db/blockchain_v1_mainnet.sqlite /var/www/html
+cd /root/.chia/mainnet/db/
+zip -9 -r blockchain_v1_mainnet.sqlite.zip blockchain_v1_mainnet.sqlite
+mv blockchain_v1_mainnet.sqlite.zip /var/www/html
 chown -R www-data:www-data /var/www/html
 chia start node
