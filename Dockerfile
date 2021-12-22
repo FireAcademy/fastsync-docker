@@ -35,7 +35,7 @@ RUN touch /var/www/html/blockchain_v1_mainnet.sqlite
 RUN chown -R www-data:www-data /var/www/html
 
 COPY job.sh /
-RUN apt-get update && apt-get install -y cron
+RUN apt-get update && apt-get install -y cron zip unzip
 COPY crontab /etc/cron.d/crontab
 RUN chmod 0644 /etc/cron.d/crontab &&\
     crontab /etc/cron.d/crontab
