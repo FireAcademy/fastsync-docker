@@ -33,7 +33,7 @@ service apache2 start
 mkdir -p "$CHIA_ROOT/db"
 cp /var/www/html/blockchain_v1_mainnet.sqlite.zip "$CHIA_ROOT/db/"
 cd "$CHIA_ROOT/db/"
-unzip blockchain_v1_mainnet.sqlite.zip
+unzip -o blockchain_v1_mainnet.sqlite.zip
 rm blockchain_v1_mainnet.sqlite.zip
 
 # cron
