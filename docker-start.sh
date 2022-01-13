@@ -26,7 +26,7 @@ fi
 chia stop all -d
 
 # start web server
-touch /var/www/html/blockchain_v1_mainnet.sqlite.zip
+touch /var/www/html/blockchain_v1_mainnet.sqlite
 service apache2 start
 
 # sync
