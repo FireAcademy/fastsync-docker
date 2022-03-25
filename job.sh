@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 . /chia-blockchain/venv/bin/activate
-chia stop all -d
+chia stop all
 cd /root/.chia/mainnet/db/
 cp blockchain_v2_mainnet.sqlite /var/www/html/blockchain_v2_mainnet.sqlite.2
 cd /var/www/html
