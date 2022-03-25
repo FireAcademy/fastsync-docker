@@ -26,12 +26,12 @@ fi
 chia stop all -d
 
 # start web server
-touch /var/www/html/blockchain_v1_mainnet.sqlite
+touch /var/www/html/blockchain_v2_mainnet.sqlite
 service apache2 start
 
 # sync
 mkdir -p "$CHIA_ROOT/db"
-cp /var/www/html/blockchain_v1_mainnet.sqlite "$CHIA_ROOT/db/"
+cp /var/www/html/blockchain_v2_mainnet.sqlite "$CHIA_ROOT/db/"
 
 # cron
 service cron start
