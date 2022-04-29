@@ -7,7 +7,8 @@ service apache2 start
 
 # sync
 mkdir -p "$CHIA_ROOT/db"
-cp /var/www/html/blockchain_v2_mainnet.sqlite "$CHIA_ROOT/db/"
+test -f /var/www/html/blockchain_v2_mainnet.sqlite && cp /var/www/html/blockchain_v2_mainnet.sqlite "$CHIA_ROOT/db/"
+test -f /var/www/html/blockchain_v2_testnet10.sqlite && cp /var/www/html/blockchain_v2_testnet10.sqlite "$CHIA_ROOT/db/"
 
 # cron
 service cron start
