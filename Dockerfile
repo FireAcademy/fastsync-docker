@@ -1,4 +1,4 @@
-FROM ghcr.io/chia-network/chia:main
+FROM ghcr.io/chia-network/chia:1.5.0
 
 ENV service="node"
 ENV upnp="false"
