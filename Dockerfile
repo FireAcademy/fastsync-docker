@@ -1,7 +1,7 @@
 FROM ghcr.io/chia-network/chia:1.5.0
 
 ENV service="node"
-ENV upnp="false"
+ENV upnp="true"
 ENV healthcheck="false"
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
