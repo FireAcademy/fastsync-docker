@@ -6,7 +6,7 @@ ENV healthcheck="false"
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
-    cron apache2 apache2-utils
+    cron apache2 apache2-utils sqlite3
 
 RUN chown -R www-data:www-data /var/www/html
 
