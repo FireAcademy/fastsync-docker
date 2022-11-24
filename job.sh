@@ -11,6 +11,6 @@ cd /var/www/html
 chown www-data:www-data *
 test -f blockchain_v2_mainnet.sqlite.bak && mv blockchain_v2_mainnet.sqlite.bak blockchain_v2_mainnet.sqlite
 test -f blockchain_v2_testnet10.sqlite.bak && mv blockchain_v2_testnet10.sqlite.bak blockchain_v2_testnet10.sqlite
-test -f height-to-hash && cp height-to-hash.bak height-to-hash
+test -f height-to-hash.bak && cp height-to-hash.bak height-to-hash
 
 chown -R www-data:www-data /var/www/html
