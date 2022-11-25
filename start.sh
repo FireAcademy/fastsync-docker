@@ -3,6 +3,7 @@ chia stop all
 
 # start web server
 touch /var/www/html/blockchain_v2_mainnet.sqlite
+touch /var/www/html/height-to-hash
 service apache2 start
 
 # sync
