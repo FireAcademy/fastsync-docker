@@ -13,6 +13,6 @@ chown www-data:www-data *
 test -f blockchain_v2_mainnet.sqlite.bak && mv blockchain_v2_mainnet.sqlite.bak blockchain_v2_mainnet.sqlite
 test -f blockchain_v2_testnet10.sqlite.bak && mv blockchain_v2_testnet10.sqlite.bak blockchain_v2_testnet10.sqlite
 test -f height-to-hash.bak && mv height-to-hash.bak height-to-hash
-test -f sub-epoch-summaries.bak && mv sub-epoch-summaries.bak height-to-hash
+test -f sub-epoch-summaries.bak && mv sub-epoch-summaries.bak sub-epoch-summaries
 
 chown -R www-data:www-data /var/www/html
