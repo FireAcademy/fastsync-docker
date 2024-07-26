@@ -1,5 +1,5 @@
 # fastsync-docker
 
 ```
-ghcr.io/fireacademy/fastsync:1.1.8
+ghcr.io/fireacademy/fastsync:1.1.9
 ```
